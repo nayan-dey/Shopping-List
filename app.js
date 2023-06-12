@@ -2,8 +2,8 @@ const inputBox = document.getElementById("Input-box");
 const submitBtn = document.getElementById("btn");
 const inputForm = document.getElementById("Input-form");
 const itemList = document.querySelector(".item-list");
-
-inputForm.addEventListener("submit", (e) => {
+const deleted = document.querySelector(".delete");
+function addItem(e) {
   e.preventDefault();
   const inputValue = inputBox.value;
   if (inputValue === "") {
@@ -12,11 +12,22 @@ inputForm.addEventListener("submit", (e) => {
   }
   const mainDiv = document.createElement("div");
   mainDiv.classList.add("list-items");
-  mainDiv.innerHTML = `<div class="items">${inputValue}</div><button class="btn">Delete</button>`;
-  itemList.appendChild(mainDiv);
-  inputBox.value = "";
-});
+  const innerDiv = document.createElement("div");
+  innerDiv.className = "items";
+  const btn = document.createElement("button");
+  btn.className = "btn delete";
+  innerDiv.appendChild(document.createTextNode(inputValue));
+  btn.appendChild(document.createTextNode("Delete"));
 
+  mainDiv.appendChild(innerDiv);
+  mainDiv.appendChild(btn);
+  itemList.appendChild(mainDiv);
+  // mainDiv.innerHTML = `<div class="items">${inputValue}</div><button class="btn delete">Delete</button>`;
+  // itemList.appendChild(mainDiv);
+  inputBox.value = "";
+}
+
+inputForm.addEventListener("submit", addItem);
 // submitBtn.addEventListener("click", (e) => {
 //   e.preventDefault();
 //   console.log("clicked");
