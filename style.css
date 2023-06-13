@@ -45,6 +45,10 @@ body {
 }
 .input-box {
   padding: 1rem 2rem;
+  background-color: #352f52;
+  color: #f1f6f9;
+  border-radius: 20px;
+  border: #393053;
 }
 .btn {
   margin: 2rem;
@@ -64,4 +68,33 @@ body {
   width: 50%;
   margin: auto;
   border-radius: 1rem;
+  list-style: none;
+  flex-direction: column;
+}
+.items {
+  background-color: #443c68;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid black;
+  width: 90%;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+.clear-btn {
+  margin: auto;
+  margin-top: 2rem;
+}
+.filter {
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.filter input {
+  width: 50%;
+  background-color: #443c68;
+  color: #f1f6f9;
+  border-radius: 20px;
+  border: #393053;
 }
