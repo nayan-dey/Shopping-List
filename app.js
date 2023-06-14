@@ -5,6 +5,7 @@ const listItems = document.querySelector(".list-items");
 const deleted = document.querySelector(".delete");
 const clear = document.querySelector(".clear-btn");
 const filter = document.querySelector(".filter");
+const filterInput = document.querySelector(".filter-input");
 const main = document.querySelector("main");
 function addItem(e) {
   e.preventDefault();
@@ -51,10 +52,25 @@ function clearAllHide() {
     filter.style.display = "block";
   }
 }
+function filterAll(e) {
+  const value = e.target.value.toLowerCase();
+  const li = document.querySelectorAll("li");
+  li.forEach((item) => {
+    itemName = item.firstChild.textContent.toLowerCase();
+    if (itemName.indexOf(value) != -1) {
+      item.style.display = "flex";
+    } else {
+      item.style.display = "none";
+    }
+
+    //do from here
+  });
+}
 
 inputForm.addEventListener("submit", addItem);
 listItems.addEventListener("click", removeItem);
 clear.addEventListener("click", clearAll);
+filterInput.addEventListener("input", filterAll);
 clearAllHide();
 
 // submitBtn.addEventListener("click", (e) => {
