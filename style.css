@@ -27,11 +27,9 @@ body {
   width: 100%;
 }
 .main-form {
-  background-color: #443c68;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid black;
   width: 50%;
   margin: auto;
   border-radius: 1rem;
@@ -57,13 +55,10 @@ body {
   background-color: #443c68;
   color: white;
 }
-
 .list-items {
-  background-color: #443c68;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid black;
   width: 50%;
   margin: auto;
   border-radius: 1rem;
@@ -72,7 +67,6 @@ body {
 }
 .items {
   font-size: 0.5rem;
-  background-color: #443c68;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,16 +97,13 @@ a {
 }
 @media (max-width: 756px) {
   .main-form {
-    background-color: #443c68;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid black;
-    width: 80%;
+    width: 50%;
     margin: auto;
     border-radius: 1rem;
   }
-
   .title {
     margin: 1rem;
     font-size: 2rem;
@@ -146,7 +137,6 @@ a {
   }
 
   .list-items {
-    background-color: #443c68;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,14 +147,16 @@ a {
     flex-direction: column;
   }
   .items {
-    background-color: #443c68;
+    font-size: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    border: solid black;
+    width: 100%;
     margin: auto;
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
   }
   .clear-btn {
     margin: auto;
@@ -181,25 +173,13 @@ a {
     border-radius: 20px;
     border: #393053;
   }
-  .main-form {
-    background-color: #443c68;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid black;
-    width: 60%;
-    margin: auto;
-    border-radius: 1rem;
-  }
 }
 @media (max-width: 1000px) {
   .main-form {
-    background-color: #443c68;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid black;
-    width: 60%;
+    width: 50%;
     margin: auto;
     border-radius: 1rem;
   }
@@ -236,7 +216,6 @@ a {
   }
 
   .list-items {
-    background-color: #443c68;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -247,14 +226,16 @@ a {
     flex-direction: column;
   }
   .items {
-    background-color: #443c68;
+    font-size: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    border: solid black;
+    width: 100%;
     margin: auto;
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
   }
   .clear-btn {
     margin: auto;
