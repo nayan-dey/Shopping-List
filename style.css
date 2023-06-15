@@ -7,7 +7,6 @@
 }
 body {
   background-color: #18122b;
-  height: 100vh;
   text-align: center;
   line-height: 2rem;
   color: #f1f6f9;
@@ -25,7 +24,6 @@ body {
   font-size: 3rem;
 }
 .main {
-  height: 90vh;
   width: 100%;
 }
 .main-form {
@@ -98,6 +96,9 @@ body {
   color: #f1f6f9;
   border-radius: 20px;
   border: #393053;
+}
+a {
+  color: aquamarine;
 }
 @media (max-width: 756px) {
   .main-form {
