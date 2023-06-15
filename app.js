@@ -84,6 +84,7 @@ function removeItemFromStorage(item) {
 //clear all the items from the list
 function clearAll() {
   listItems.innerHTML = "";
+  localStorage.removeItem("items");
   clearAllHide();
 }
 //if there no any item clearAll button will be desabled
