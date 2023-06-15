@@ -25,7 +25,7 @@ body {
   font-size: 3rem;
 }
 .main {
-  height: 70vh;
+  height: 90vh;
   width: 100%;
 }
 .main-form {
@@ -110,6 +110,7 @@ body {
     margin: auto;
     border-radius: 1rem;
   }
+
   .title {
     margin: 1rem;
     font-size: 2rem;
@@ -178,6 +179,16 @@ body {
     border-radius: 20px;
     border: #393053;
   }
+  .main-form {
+    background-color: #443c68;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid black;
+    width: 60%;
+    margin: auto;
+    border-radius: 1rem;
+  }
 }
 @media (max-width: 1000px) {
   .main-form {
@@ -186,7 +197,7 @@ body {
     justify-content: center;
     align-items: center;
     border: solid black;
-    width: 80%;
+    width: 60%;
     margin: auto;
     border-radius: 1rem;
   }

@@ -7,6 +7,9 @@ const clear = document.querySelector(".clear-btn");
 const filter = document.querySelector(".filter");
 const filterInput = document.querySelector(".filter-input");
 const main = document.querySelector("main");
+
+let isEditMode = false;
+
 //adding item from input box value
 function addItem(e) {
   e.preventDefault();
@@ -14,6 +17,12 @@ function addItem(e) {
   if (inputValue === "") {
     alert("Write something first");
     return;
+  }
+  if (isEditMode) {
+    const edited = listItems.querySelector(".edit-mode");
+    removeItemFromStorage(edited.firstChild.textContent);
+    edited.remove();
+    isEditMode = false;
   }
   addItemsToDOM(inputValue);
   addItemsToStorage(inputValue);
@@ -63,7 +72,16 @@ function getItemFromStorage() {
 function OnClickItem(e) {
   if (e.target.classList.contains("delete")) {
     removeItem(e.target.parentElement);
+  } else {
+    updateItems(e.target);
   }
+}
+//update items
+function updateItems(item) {
+  isEditMode = true;
+  item.classList.add("edit-mode");
+  inputBox.value = item.firstChild.textContent;
+  submitBtn.textContent = "Update Note";
 }
 //remove item from list
 function removeItem(item) {
@@ -75,8 +93,6 @@ function removeItem(item) {
 //remove item from storage
 function removeItemFromStorage(item) {
   let itemsFromStorage = getItemFromStorage();
-  console.log(itemsFromStorage);
-  console.log(item);
   itemsFromStorage = itemsFromStorage.filter((i) => i !== item);
   localStorage.setItem("items", JSON.stringify(itemsFromStorage));
 }
