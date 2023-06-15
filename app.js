@@ -113,6 +113,8 @@ function clearAllHide() {
     clear.style.display = "block";
     filter.style.display = "block";
   }
+  submitBtn.textContent = "Add Note";
+  isEditMode = false;
 }
 //filter search function from the list items
 function filterAll(e) {
